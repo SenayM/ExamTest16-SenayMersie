@@ -1,0 +1,76 @@
+Started by upstream project "UKLocation_Soap_Test_Project" build number 25
+originally caused by:
+ Started by user Senay Mersie
+Building on master in workspace C:\Program Files (x86)\Jenkins\workspace\TimeSheetApp_Rest_Test_project
+ > C:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/SenayM/ExamTest16-SenayMersie.git # timeout=10
+Fetching upstream changes from https://github.com/SenayM/ExamTest16-SenayMersie.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/SenayM/ExamTest16-SenayMersie.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision a7b713c86c69c385f8c38571c0706a9e98a38f61 (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f a7b713c86c69c385f8c38571c0706a9e98a38f61
+ > C:\Program Files\Git\bin\git.exe rev-list a7b713c86c69c385f8c38571c0706a9e98a38f61 # timeout=10
+Parsing POMs
+Established TCP socket on 58032
+[TimeSheetApp_Rest_Test_project] $ "C:\Program Files\Java\jdk1.8.0_121\/bin/java" -cp "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven33-agent-1.8.1.jar;C:\Program Files\Java\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;C:\Program Files\Java\apache-maven-3.3.9/conf/logging" jenkins.maven3.agent.Maven33Main "C:\Program Files\Java\apache-maven-3.3.9\" "C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-3.7.jar" "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven33-interceptor-1.8.1.jar" "C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.8.1.jar" 58032
+<===[JENKINS REMOTING CAPACITY]===>???channel started
+Executing Maven:  -B -f C:\Program Files (x86)\Jenkins\workspace\TimeSheetApp_Rest_Test_project\pom.xml com.smartbear.soapui:soapui-maven-plugin:test -DprojectFile=TimeSheetApp-soapui-project.xml
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building soapUI project 0.0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- soapui-maven-plugin:5.0.0:test (default-cli) @ soapui-project ---
+SoapUI 5.0.0 Maven2 TestCase Runner
+11:56:20,444 WARN  [SoapUI] Missing folder [C:\Program Files (x86)\Jenkins\workspace\TimeSheetApp_Rest_Test_project\ext] for external libraries
+11:56:20,445 INFO  [DefaultSoapUICore] Creating new settings at [C:\Windows\system32\config\systemprofile\soapui-settings.xml]
+11:56:21,367 INFO  [WsdlProject] Loaded project from [file:/C:/Program%20Files%20(x86)/Jenkins/workspace/TimeSheetApp_Rest_Test_project/TimeSheetApp-soapui-project.xml]
+11:56:21,878 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [TimeSheetApp]
+11:56:21,880 INFO  [SoapUITestCaseRunner] Running Project [TimeSheetApp], runType = SEQUENTIAL
+11:56:21,891 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [TimeSheetApp-TestCase]
+11:56:21,896 INFO  [SoapUITestCaseRunner] running step [Static-EmpData-Post-Teststep]
+11:56:22,244 INFO  [log] Employee firstName :  Molar
+11:56:22,247 INFO  [log] Employee lastName :  Marks
+11:56:22,247 INFO  [log] Employee gender :  male
+11:56:22,247 INFO  [log] Employee role :  Tester
+11:56:22,247 INFO  [log] Employee email :  marks@gmail.com
+11:56:22,261 INFO  [SoapUITestCaseRunner] running step [Post-NewEmployee]
+11:56:22,437 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+11:56:22,438 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: POST /employees/create HTTP/1.1
+11:56:22,701 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 204 
+11:56:22,703 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+11:56:22,712 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+11:56:22,713 INFO  [SoapUITestCaseRunner] running step [Get-AllEmployee]
+11:56:22,716 DEBUG [HttpClientSupport$SoapUIHttpClient] Stale connection check
+11:56:22,717 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+11:56:22,718 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: GET /employees/all HTTP/1.1
+11:56:22,790 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 200 
+11:56:22,793 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+11:56:22,934 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+11:56:22,935 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+11:56:22,935 INFO  [SoapUITestCaseRunner] running step [Delete-Employee]
+11:56:22,938 DEBUG [HttpClientSupport$SoapUIHttpClient] Stale connection check
+11:56:22,939 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+11:56:22,939 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: DELETE /employees/delete HTTP/1.1
+11:56:23,006 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 400 
+11:56:23,006 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+11:56:23,012 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+11:56:23,012 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [TimeSheetApp-TestCase], time taken: 902ms, status: FINISHED
+11:56:23,013 INFO  [SoapUITestCaseRunner] Project [TimeSheetApp] finished with status [FINISHED] in 1129ms
+[JENKINS] Recording test results
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.264 s
+[INFO] Finished at: 2017-05-22T11:56:23+02:00
+[INFO] Final Memory: 26M/335M
+[INFO] ------------------------------------------------------------------------
+[JENKINS] Archiving C:\Program Files (x86)\Jenkins\workspace\TimeSheetApp_Rest_Test_project\pom.xml to com.scania.cbm.test/soapui-project/0.0.1/soapui-project-0.0.1.pom
+channel stopped
+Finished: SUCCESS
